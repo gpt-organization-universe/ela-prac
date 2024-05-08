@@ -22,7 +22,6 @@ public class MenuService {
 
 	public MenuDTO findMenuByMenuCode(int menuCode) {
 		Menu selectedMenu = menuRepository.findById(menuCode).orElseThrow(IllegalArgumentException::new);
-
 		return mapper.map(selectedMenu, MenuDTO.class);
 	}
 }
